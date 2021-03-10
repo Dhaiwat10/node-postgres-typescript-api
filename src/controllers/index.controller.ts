@@ -9,6 +9,11 @@ export const getUsers = async (
   res: Response
 ): Promise<Response> => {
   try {
+    console.log(process.env.DB_USER);
+    console.log(process.env.DB_HOST);
+    console.log(process.env.DB_PASS);
+    console.log(process.env.DB_DATABASE_NAME);
+    console.log(process.env.DB_PORT);
     const response: QueryResult = await pool.query('SELECT * FROM users');
     return res.status(200).json(response.rows);
   } catch (e) {

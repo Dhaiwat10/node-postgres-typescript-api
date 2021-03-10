@@ -15,10 +15,3 @@ let port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log('Server on port', port);
 });
-
-
-console.log(process.env.DB_USER);
-console.log(process.env.DB_HOST);
-console.log(process.env.DB_PASS);
-console.log(process.env.DB_DATABASE_NAME);
-console.log(process.env.DB_PORT);
